@@ -1,0 +1,42 @@
+<div class="page page-form">
+    <div class="row">
+        <div class="col-md-12" data-ng-controller="formConstraintsCtrl">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Constraints</strong></div>
+                <div class="panel-body">
+                    <form name="form_constraints" class="form-validation" novalidate data-ng-submit="submitForm()">
+                        <div class="form-group">
+                            <label for="">Required</label>
+                            <input  type="text"
+                                    class="form-control"
+                                    required
+                                    data-ng-model="form.required"
+                            >
+                            <br>
+                            <textarea class="form-control"
+                                      rows="10"
+                                      required
+                                      data-ng-model="form.required_textarea"></textarea>
+                            <br>
+                            <input  type="checkbox"
+                                    id="required_checkbox"
+                                    required
+                                    data-ng-model="form.required_checkbox"> 
+                            <label for="required_checkbox">You need to agree to the Policy</label>
+                        </div>
+                        <button type="submit"
+                                class="btn btn-success"
+                                data-ng-disabled="!canSubmit()"
+                                >Submit</button>
+                        <button class="btn btn-default"
+                                data-ng-disabled="!canRevert()"
+                                data-ng-click="revert()"
+                        >Revert Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+</script>
