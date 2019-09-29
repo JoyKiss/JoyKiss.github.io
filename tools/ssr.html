@@ -6,5 +6,21 @@
 </head>
 <body>
 55555554
+	<script type="text/javascript">
+	  		$(function() {
+		$.ajax({
+        url:"http://yingyan.baidu.com/api/v3/entity/list", 
+dataType: 'json',
+type : 'GET',
+crossDomain: true,
+contentType: "text/plain",
+        success:function(data){
+	console.log(data);
+        },
+        error:function(jqXHR){
+           console.log("发生错误："+ jqXHR.status);
+        }
+});})
+</script>
 </body>
 </html>
